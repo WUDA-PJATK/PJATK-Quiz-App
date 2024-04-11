@@ -79,7 +79,7 @@ export default function Home() {
 
                {item.content.map((item) => {
                  return (
-                   <div style={{ display: 'flex', justifyContent:'center' }}>
+                   <div key={item.title}  style={{ display: 'flex', justifyContent:'center' }}>
                      <p >{item.title}</p>
                      <Checkbox />
                    </div>
