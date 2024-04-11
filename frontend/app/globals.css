@@ -1,3 +1,12 @@
 body {
   background: linear-gradient(90deg, rgba(38,107,164,1) 0%, rgba(43,172,227,1) 62%, rgba(0,210,240,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navTitle 
+{
+  color:'white'
+
 }
