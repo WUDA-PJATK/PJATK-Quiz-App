@@ -1,4 +1,4 @@
-package com.quiz.quizApp.Pytania;
+package com.quizApp.quizApp.Pytania;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

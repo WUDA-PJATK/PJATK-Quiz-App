@@ -1,6 +1,7 @@
-package com.quiz.quizApp.Pytania;
+package com.quizApp.quizApp.Pytania;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
