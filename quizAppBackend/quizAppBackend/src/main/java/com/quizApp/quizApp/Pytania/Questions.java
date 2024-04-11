@@ -1,4 +1,4 @@
-package com.quiz.quizApp.Pytania;
+package com.quizApp.quizApp.Pytania;
 
 
 import jakarta.persistence.*;

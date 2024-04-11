@@ -1,4 +1,4 @@
-package com.quiz.quizApp.Pytania;
+package com.quizApp.quizApp.Pytania;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,10 +23,10 @@ public class QuestionsService {
         questionsRepository.save(questions);
     }
 
-    public void deleteQuestions(long questionsId){
+    public void deleteQuestions(long questionsId) throws Exception {
         boolean exists = questionsRepository.existsById(questionsId);
         if(!exists){
-            throw new IllegalArgumentException("Questions of that id does not exist");
+            throw new Exception("err");
         }
         questionsRepository.deleteById(questionsId);
     }

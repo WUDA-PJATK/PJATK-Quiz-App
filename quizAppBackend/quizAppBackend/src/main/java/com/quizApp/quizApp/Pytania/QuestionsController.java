@@ -1,4 +1,4 @@
-package com.quiz.quizApp.Pytania;
+package com.quizApp.quizApp.Pytania;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +27,7 @@ public class QuestionsController {
     }
 
     @DeleteMapping(path = "{questionId}")
-    public void deleteQuestion(@PathVariable("questionId") Long questionId){
+    public void deleteQuestion(@PathVariable("questionId") Long questionId) throws Exception {
         questionsService.deleteQuestions(questionId);
     }
 
