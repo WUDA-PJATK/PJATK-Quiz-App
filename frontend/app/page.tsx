@@ -1,99 +1,31 @@
-
-import Card from "@mui/material/Card"
-import Container from "@mui/material/Container"
-import Checkbox from '@mui/material/Checkbox';
-
-
-
-const answers = [
-  {
-    id: 1,
-    question: "Co to za relacja?",
-    content: [
-    {
-      title: "Zwrotna",
-      correct: true
-    },
-    {
-      title: "Przeciwzwrotna",
-      correct: true
-    },
-    {
-      title: "Symetryczna",
-      correct: true
-    },
-    {
-      title: "Przeciwsymetryczna",
-      correct: true
-    },{
-      title: "Asymetryczna",
-      correct: true
-    },{
-      title: "Spójna",
-      correct: true
-    },
-  ]
- 
-  },
-  {
-    id: 2,
-    question: "Która z relacji poniżej jest przedstawiona?",
-    content: [
-    {
-      title: "Zwrotna",
-      correct: true
-    },
-    {
-      title: "Przeciwzwrotna",
-      correct: true
-    },
-    {
-      title: "Symetryczna",
-      correct: true
-    },
-    {
-      title: "Przeciwsymetryczna",
-      correct: true
-    },{
-      title: "Asymetryczna",
-      correct: true
-    },{
-      title: "Spójna",
-      correct: true
-    },
-  ]
- 
-  }
-]
+import Nav from "@/components/Nav";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { TextRevealCard} from "@/components/ui/text-reveal-card";
 
 
-export default function Home() {
+
+export default function Home()
+{
   return (
-    <main >
-      <form>
-        {answers.map((item) => {
-          return (
-            <Card key={item.id}  sx={{ width: '50vw', textAlign:'center', margin: 2}}>
-               <p> Pytanie {item.id} </p> 
-               <p>{item.question}</p>
-
-               {item.content.map((item) => {
-                 return (
-                   <div key={item.title}  style={{ display: 'flex', justifyContent:'center' }}>
-                     <p >{item.title}</p>
-                     <Checkbox />
-                   </div>
-                 )
-               })
-               }
-            </Card>
-          )
-          
-        })
-
-        }
-         
-      </form>
-    </main>
-  );
+        <main className="flex p-24 flex-col gap-8">
+                <div className="flex justify-center">
+                    <TextRevealCard text="クイズアプリ" revealText="PJATK Quiz App" />
+                </div>
+                <section className="py-24 flex flex-col gap-8 text-center text-align">
+                  <h1 className="text-4xl font-bold">PJATK Quiz App</h1>
+                  <p className="text-2xl text-muted-foreground">Wylosuj pytania i odpowiedz nanie!</p>
+                </section>
+                
+                <div className="flex gap-6 py-6 items-center text-center text-align justify-center">
+                  <Button>
+                    <Link href="/questions">Generuj Pytania</Link>
+                  </Button>
+                  <Button>
+                    <Link href="/creator">Dodaj Pytania</Link>
+                  </Button>
+                </div>
+                
+        </main>              
+  ) 
 }

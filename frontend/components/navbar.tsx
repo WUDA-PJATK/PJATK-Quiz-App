@@ -1,4 +1,3 @@
-import { AppBar, Toolbar } from "@mui/material";
 import Link from "next/link";
 
 const links = [
@@ -16,8 +15,7 @@ const links = [
 
 export function Navbar() {
   return (
-    <AppBar>
-      <Toolbar sx={{ flex:1, justifyContent:'center'}}>
+    <div>
       {links.map(item => {
         return(
           <Link key={item.id}  href={item.href} style={{ textDecoration: 'none', margin: 20, color:'white' }}>
@@ -26,7 +24,7 @@ export function Navbar() {
         ) 
         })
       }
-      </Toolbar>
-    </AppBar>
+    </div>
+
   )
 }
