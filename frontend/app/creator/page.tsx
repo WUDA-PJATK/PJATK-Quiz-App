@@ -1,6 +1,4 @@
-const getStaticProps = async () => {
-    count res = await fetch('https://json  ')
-}
+
 
 export default function Creator() {
     
